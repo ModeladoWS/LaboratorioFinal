@@ -23,38 +23,38 @@ public class PanelDibujo extends JPanel {
 		this.setLayout(null);	
 		
 		
-		JButton arriba = new JButton(new ImageIcon("Arriba.PNG"));
+		JButton arriba = new JButton(new ImageIcon("Arriba.png"));
 		arriba.setBounds(55, 20, 35, 35);
 		this.add(arriba);
 		
-		JButton izq = new JButton(new ImageIcon("izq.PNG"));
+		JButton izq = new JButton(new ImageIcon("izq.png"));
 		izq.setBounds(20, 40, 35, 35);
 		this.add(izq);
 		
-		JButton der = new JButton(new ImageIcon("der.PNG"));
+		JButton der = new JButton(new ImageIcon("der.png"));
 		der.setBounds(90, 40, 35, 35);		
 		this.add(der);
 		
 		
-		JButton abajo = new JButton(new ImageIcon("abajo.PNG"));
+		JButton abajo = new JButton(new ImageIcon("abajo.png"));
 		abajo.setBounds(55, 55, 35, 35);
 		this.add(abajo);
 		
 		
-		JButton mas = new JButton(new ImageIcon("mas.PNG"));
+		JButton mas = new JButton(new ImageIcon("mas.png"));
 		mas.setBounds(20, 550, 40, 40);
 		this.add(mas);
 		
-		JButton menos = new JButton(new ImageIcon("menos.PNG"));
+		JButton menos = new JButton(new ImageIcon("menos.png"));
 		menos.setBounds(60, 550, 40, 40);
 		this.add(menos);
 	
 		
-		JButton rotar = new JButton(new ImageIcon("rotar-izq.PNG"));
+		JButton rotar = new JButton(new ImageIcon("rotar-izq.png"));
 		rotar.setBounds(820, 20, 30, 30);
 		this.add(rotar);
 			
-		JButton rotarDer = new JButton(new ImageIcon("rotar-der.PNG"));
+		JButton rotarDer = new JButton(new ImageIcon("rotar-der.png"));
 		rotarDer.setBounds(850, 20, 30, 30);
 		this.add(rotarDer);
 			
