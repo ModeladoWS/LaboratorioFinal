@@ -7,7 +7,8 @@ import javax.swing.border.Border;
 
 public class VentanaPrincipal extends JFrame {
 	
-	private PanelDibujo panel;
+	private PanelDibujo panelDibujo = null;
+	private PanelIngresarNumeroPuntos panelIngresar = null;
 	
 	public VentanaPrincipal() {
 		
@@ -16,6 +17,13 @@ public class VentanaPrincipal extends JFrame {
 		
 		// Tambien agreguen los botones de: subir, bajar, rotar, acercar y  alejar
 		// tambien como en el dibujito
+		panelIngresar = new PanelIngresarNumeroPuntos();
+		panelIngresar.setLocation(20, 10);
+		super.add(panelIngresar);
+		
+		panelDibujo = new PanelDibujo();
+		panelDibujo.setLocation(340, 10);
+		super.add(panelDibujo);
 	}
 
 }

@@ -12,10 +12,7 @@ import javax.swing.JSpinner;
 import javax.swing.border.Border;
 
 public class PanelIngresarNumeroPuntos extends JPanel {
-	Border blackline = BorderFactory.createLineBorder(Color.black);
 	
-	public PanelIngresarNumeroPuntos() {
-		//Border blackline = BorderFactory.createLineBorder(Color.black);
 	Border titulo = BorderFactory.createTitledBorder("Usuario");
 
 	
@@ -24,7 +21,7 @@ public class PanelIngresarNumeroPuntos extends JPanel {
 	private JButton agregar;
 	
 	public PanelIngresarNumeroPuntos() {
-		super.setBorder(blackline);
+		super.setBorder(titulo);
 		
 		// le ponemos layout null para que los botones se acomoden como nosotrso queremos
 		this.setLayout(null);
@@ -33,8 +30,8 @@ public class PanelIngresarNumeroPuntos extends JPanel {
 		
 		//this.setBounds(10, 10, 350, 100);
 		// Para dar tamaño a una ventana se usa setSize, no setBounds
+		this.setSize(300, 200);
 		
-		//this.setSize(300, 200);
 		noPuntos = new JLabel("	No. Puntos :	");
 		// falta el setbounds para noPuntos
 		this.add(noPuntos);

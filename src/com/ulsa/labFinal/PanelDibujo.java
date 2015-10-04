@@ -11,28 +11,21 @@ import javax.swing.JPanel;
 import javax.swing.border.Border;
 
 public class PanelDibujo extends JPanel {
-	Border titulo = BorderFactory.createTitledBorder(null,"Plano");
+	Border titulo = BorderFactory.createTitledBorder("Plano");
 	
 	public static final int ANCHO = 500;
 	public static final int ALTO = 500;
 	static int escala = 15;
 	
 	public PanelDibujo() {
-		super.setBorder(blackline);
-		
-		// No agreguen nada aqui :)
+		super.setBorder(titulo);
+		this.setSize(900, 600);
+		this.setLayout(null);
 	}
 	
 	@Override
 	public void paint(Graphics g){
-
-		Graphics2D g2 = (Graphics2D) g;
-
-		//Plano cartesiano
-		g2.drawLine(ConvertirUnidadesX(-50),ConvertirUnidadesY(0),ConvertirUnidadesX(50),ConvertirUnidadesY(0));
-		g2.drawLine(ConvertirUnidadesX(0),ConvertirUnidadesY(-50),ConvertirUnidadesX(0),ConvertirUnidadesY(50));
-
-	
+		super.paint(g);
 	}
 	
 	@Override
@@ -40,6 +33,11 @@ public class PanelDibujo extends JPanel {
 		super.paintComponent(g);
 		
 	}
+	
+	public void repintar(Graphics g) {
+		super.paint(g);
+	}
+	
 	private static int ConvertirUnidadesX(double x) {
 		double centro = ANCHO / 2.0;
 		return  (int)(centro + x * escala);
