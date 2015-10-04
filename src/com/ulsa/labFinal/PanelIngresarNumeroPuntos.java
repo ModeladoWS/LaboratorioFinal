@@ -7,23 +7,15 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
-public class PanelDibujo extends JPanel {
+public class PanelIngresarNumeroPuntos extends JPanel {
 	Border blackline = BorderFactory.createLineBorder(Color.black);
 	
-	public PanelDibujo() {
+	public PanelIngresarNumeroPuntos() {
 		super.setBorder(blackline);
 		
-		// No agreguen nada aqui
-	}
-	
-	@Override
-	public void paint(Graphics g) {
-		super.paint(g);
-	}
-	
-	@Override
-	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
+		// Agreguen un Jlabel y un JSpinner aqui
 		
 	}
+	
+
 }

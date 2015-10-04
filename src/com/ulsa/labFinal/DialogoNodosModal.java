@@ -7,6 +7,7 @@ public class DialogoNodosModal extends JDialog {
 	
 	public DialogoNodosModal(JFrame padre) {
 		super(padre, true);
+		//Este dejenmelo a mi :)
 	}
 
 }
