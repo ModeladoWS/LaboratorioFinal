@@ -55,7 +55,7 @@ public class DialogoNodosModal extends JDialog {
 				this.panel.add(eY);
 			JTextField y = new JTextField();
 				y.setBounds(340, (i * 30 + 30), 100, 20);
-			JLabel pareja = new JLabel("Se une a:");
+			JLabel pareja = new JLabel("Se une con:");
 				pareja.setBounds(450, (i * 30 + 30), 100, 20);
 				this.panel.add(pareja);
 			JComboBox<String> combo = new JComboBox<>();
