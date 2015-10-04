@@ -1,7 +1,9 @@
 package com.ulsa.labFinal;
 
 import java.awt.Color;
+import java.awt.Graphics;
 import java.util.LinkedList;
+
 import javax.swing.JFrame;
 import javax.swing.border.Border;
 
@@ -10,7 +12,7 @@ public class VentanaPrincipal extends JFrame {
 	private PanelDibujo panelDibujo = null;
 	private PanelIngresarNumeroPuntos panelIngresar = null;
 	private LinkedList<Punto> puntos;
-	private int exito=0;
+	private int exito = 0;
 
 	public VentanaPrincipal() {
 
@@ -21,14 +23,18 @@ public class VentanaPrincipal extends JFrame {
 		// tambien como en el dibujito
 		this.puntos=null;
 
-		panelIngresar = new PanelIngresarNumeroPuntos();
+		panelIngresar = new PanelIngresarNumeroPuntos(this);
 		panelIngresar.setLocation(20, 10);
 		super.add(panelIngresar);
 
-		panelDibujo = new PanelDibujo();
+		panelDibujo = new PanelDibujo(this);
 		panelDibujo.setLocation(340, 10);
 		super.add(panelDibujo);
 		
+	}
+	
+	public void iniciarDibujado(Graphics g) {
+		this.panelDibujo.pintarFigura(g, this.puntos);
 	}
 	
 	public LinkedList<Punto> getPuntos() {
@@ -50,4 +56,22 @@ public class VentanaPrincipal extends JFrame {
 		this.exito = exito;
 	}
 
+	public PanelDibujo getPanelDibujo() {
+		return panelDibujo;
+	}
+
+	public void setPanelDibujo(PanelDibujo panelDibujo) {
+		this.panelDibujo = panelDibujo;
+	}
+
+	public PanelIngresarNumeroPuntos getPanelIngresar() {
+		return panelIngresar;
+	}
+
+	public void setPanelIngresar(PanelIngresarNumeroPuntos panelIngresar) {
+		this.panelIngresar = panelIngresar;
+	}
+
+	
+	
 }

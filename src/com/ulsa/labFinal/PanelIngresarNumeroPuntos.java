@@ -1,5 +1,11 @@
 package com.ulsa.labFinal;
 
+
+
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -17,32 +23,44 @@ public class PanelIngresarNumeroPuntos extends JPanel {
 	private JSpinner spinner;
 	private JLabel noPuntos;
 	private JButton agregar;
+	private VentanaPrincipal ventana;
+	private PanelIngresarNumeroPuntos panel = this;
+	private PanelDibujo panelDibujo = null;
 	
-	public PanelIngresarNumeroPuntos() {
+	public PanelIngresarNumeroPuntos(VentanaPrincipal v) {
 		super.setBorder(titulo);
-		
-		// le ponemos layout null para que los botones se acomoden como nosotrso queremos
+		this.ventana = v;
 		this.setLayout(null);
-		
-		// Agreguen un Jlabel y un JSpinner aqui
-		
-		//this.setBounds(10, 10, 350, 100);
-		// Para dar tamaño a una ventana se usa setSize, no setBounds
 		this.setSize(300, 200);
+		this.panelDibujo = v.getPanelDibujo();
 		
-		noPuntos = new JLabel("No. Puntos:");
-		// falta el setbounds para noPuntos
-		noPuntos.setBounds(20, 50, 100, 20);
+		this.noPuntos = new JLabel("No. Puntos:");
+		this.noPuntos.setBounds(20, 50, 100, 20);
 		this.add(noPuntos);
+		
 		SpinnerNumberModel modelo = new SpinnerNumberModel(2, 2, 100, 1);
-		spinner = new JSpinner(modelo);
-		// falta el setBounds para el spinner
-		spinner.setBounds(150, 50, 100, 20);
+		this.spinner = new JSpinner(modelo);
+		this.spinner.setBounds(150, 50, 100, 20);
 		this.add(spinner);
 		
-		agregar = new JButton("Agregar");
-		// falta el setbounds para el boton Agregar
-		agregar.setBounds(150, 120, 100, 20);
+		this.agregar = new JButton("Agregar");
+		this.agregar.setBounds(150, 120, 100, 20);
+		this.agregar.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int n = (int) panel.getSpinner().getValue();
+				DialogoNodosModal d = new DialogoNodosModal(panel.ventana, true, n);
+				if (panel.getVentana().getExito() == 1) {
+					System.out.println("Aceptar");
+					Graphics g = panel.getVentana().getPanelDibujo().getGraphics();
+					panel.getVentana().iniciarDibujado(g);
+				}
+				else
+					System.out.println("No Exito");
+			}
+			
+		});
 		this.add(agregar);
 		
 		
@@ -78,6 +96,30 @@ public class PanelIngresarNumeroPuntos extends JPanel {
 
 	public void setAgregar(JButton agregar) {
 		this.agregar = agregar;
+	}
+
+	public VentanaPrincipal getVentana() {
+		return ventana;
+	}
+
+	public void setVentana(VentanaPrincipal ventana) {
+		this.ventana = ventana;
+	}
+
+	public PanelIngresarNumeroPuntos getPanel() {
+		return panel;
+	}
+
+	public void setPanel(PanelIngresarNumeroPuntos panel) {
+		this.panel = panel;
+	}
+
+	public PanelDibujo getPanelDibujo() {
+		return panelDibujo;
+	}
+
+	public void setPanelDibujo(PanelDibujo panelDibujo) {
+		this.panelDibujo = panelDibujo;
 	}
 	
 	
