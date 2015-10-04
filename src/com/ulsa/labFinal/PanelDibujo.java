@@ -41,19 +41,22 @@ public class PanelDibujo extends JPanel {
 		this.add(abajo);
 		
 		
-		
-		JButton mas = new JButton("Zoom",new ImageIcon("mas.PNG"));
-		mas.setBounds(200, 20, 100, 40);
+		JButton mas = new JButton(new ImageIcon("mas.PNG"));
+		mas.setBounds(20, 550, 40, 40);
 		this.add(mas);
 		
-		JButton menos = new JButton("Zoom",new ImageIcon("menos.PNG"));
-		menos.setBounds(350, 20, 110, 40);
+		JButton menos = new JButton(new ImageIcon("menos.PNG"));
+		menos.setBounds(60, 550, 40, 40);
 		this.add(menos);
 	
 		
-		JButton rotar = new JButton("Rotar",new ImageIcon("rotar.PNG"));
-		rotar.setBounds(550, 20, 110, 40);
+		JButton rotar = new JButton(new ImageIcon("rotar-izq.PNG"));
+		rotar.setBounds(820, 20, 30, 30);
 		this.add(rotar);
+			
+		JButton rotarDer = new JButton(new ImageIcon("rotar-der.PNG"));
+		rotarDer.setBounds(850, 20, 30, 30);
+		this.add(rotarDer);
 			
 		
 		
