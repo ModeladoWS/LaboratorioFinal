@@ -20,7 +20,7 @@ public class PanelDibujo extends JPanel {
 	public PanelDibujo() {
 		super.setBorder(blackline);
 		
-		// No agreguen nada aqui
+		// No agreguen nada aqui :)
 	}
 	
 	@Override
