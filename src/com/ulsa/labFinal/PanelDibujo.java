@@ -7,6 +7,7 @@ import java.awt.Graphics2D;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
@@ -22,24 +23,31 @@ public class PanelDibujo extends JPanel {
 		this.setSize(900, 600);
 		this.setLayout(null);	
 		
+		JLabel trasladar = new JLabel("	TRASLADAR  : ");
+		trasladar.setBounds(20, 15, 100, 35);
+		this.add(trasladar);
 		
 		JButton arriba = new JButton(new ImageIcon("Arriba.png"));
-		arriba.setBounds(55, 20, 35, 35);
+		arriba.setBounds(60, 40, 35, 35);
 		this.add(arriba);
 		
 		JButton izq = new JButton(new ImageIcon("izq.png"));
-		izq.setBounds(20, 40, 35, 35);
+		izq.setBounds(25, 60, 35, 35);
 		this.add(izq);
 		
 		JButton der = new JButton(new ImageIcon("der.png"));
-		der.setBounds(90, 40, 35, 35);		
+		der.setBounds(95, 60, 35, 35);		
 		this.add(der);
 		
 		
 		JButton abajo = new JButton(new ImageIcon("abajo.png"));
-		abajo.setBounds(55, 55, 35, 35);
+		abajo.setBounds(60, 75, 35, 35);
 		this.add(abajo);
 		
+		
+		JLabel zoom = new JLabel("	ZOOM  : ");
+		zoom.setBounds(20, 520, 80, 35);
+		this.add(zoom);
 		
 		JButton mas = new JButton(new ImageIcon("mas.png"));
 		mas.setBounds(20, 550, 40, 40);
@@ -49,13 +57,16 @@ public class PanelDibujo extends JPanel {
 		menos.setBounds(60, 550, 40, 40);
 		this.add(menos);
 	
+		JLabel rotarI = new JLabel("	ROTAR  : ");
+		rotarI.setBounds(820, 15, 100, 35);
+		this.add(rotarI);
 		
 		JButton rotar = new JButton(new ImageIcon("rotar-izq.png"));
-		rotar.setBounds(820, 20, 30, 30);
+		rotar.setBounds(820, 40, 30, 30);
 		this.add(rotar);
 			
 		JButton rotarDer = new JButton(new ImageIcon("rotar-der.png"));
-		rotarDer.setBounds(850, 20, 30, 30);
+		rotarDer.setBounds(850, 40, 30, 30);
 		this.add(rotarDer);
 			
 		
