@@ -31,6 +31,7 @@ public class DialogoNodosModal extends JDialog {
 		this.setSize(800, 500);
 		this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		this.setLayout(null);
+		this.setLocationRelativeTo(null);
 		this.puntos = new LinkedList<>();
 		this.componentes = new LinkedList<>();
 		this.panel = new PanelComponentes(noPuntos);

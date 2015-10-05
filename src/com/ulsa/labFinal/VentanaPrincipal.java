@@ -21,8 +21,7 @@ public class VentanaPrincipal extends JFrame {
 
 		// Tambien agreguen los botones de: subir, bajar, rotar, acercar y  alejar
 		// tambien como en el dibujito
-		this.puntos=null;
-
+		this.puntos = null;
 		panelIngresar = new PanelIngresarNumeroPuntos(this);
 		panelIngresar.setLocation(20, 10);
 		super.add(panelIngresar);
